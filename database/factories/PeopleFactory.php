@@ -9,17 +9,12 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PeopleFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition()
     {
         return [
             'firstname' => fake()->firstName(),
             'lastname' => fake()->lastName(),
-            'date' => fake()->dateTimeBetween('- 100 years', now()),
+            'birth_date' => fake()->dateTimeBetween('-100 years', now()),
             'height' => fake()->numberBetween(100, 250)
         ];
     }
